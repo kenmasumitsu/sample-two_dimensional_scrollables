@@ -84,6 +84,18 @@ class _HomePageState extends State<HomePage> {
   }
 
   TableViewCell _buildCell(BuildContext context, TableVicinity vicinity) {
+    if ((vicinity.row == 1 || vicinity.row == 2) &&
+        (vicinity.column == 1 || vicinity.column == 2)) {
+      return TableViewCell(
+        rowMergeStart: 1,
+        rowMergeSpan: 2,
+        columnMergeStart: 1,
+        columnMergeSpan: 2,
+        child: Center(
+          child: Text('## Tile c: ${vicinity.column}, r: ${vicinity.row}'),
+        ),
+      );
+    }
     return TableViewCell(
       child: Center(
         child: Text('Tile c: ${vicinity.column}, r: ${vicinity.row}'),
