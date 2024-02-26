@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
         columnBuilder: _buildColumnSpan,
         rowBuilder: _buildRowSpan,
         cellBuilder: _buildCell,
-        //pinnedRowCount: 1,
-        //pinnedColumnCount: 1,
+        pinnedRowCount: 1,
+        pinnedColumnCount: 1,
       ),
     );
   }
