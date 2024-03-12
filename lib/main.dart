@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Home Page'),
       ),
       body: TableView.builder(
+        diagonalDragBehavior: DiagonalDragBehavior.free,
         columnCount: 10,
         rowCount: 20,
         columnBuilder: _buildColumnSpan,
